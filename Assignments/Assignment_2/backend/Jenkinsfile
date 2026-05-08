@@ -8,31 +8,39 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                dir('Assignments/Assignment_2/backend') {
+                    sh 'npm install'
+                }
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                dir('Assignments/Assignment_2/backend') {
+                    sh 'npm run build'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+                dir('Assignments/Assignment_2/backend') {
+                    sh 'npm test'
+                }
             }
             post {
                 always {
-                    junit 'junit.xml'
+                    junit 'Assignments/Assignment_2/backend/junit.xml'
                 }
             }
         }
 
         stage('Docker Build') {
             steps {
-                script {
-                    docker.build('norwang2026/be-todo:assignment2')
+                dir('Assignments/Assignment_2/backend') {
+                    script {
+                        docker.build('norwang2026/be-todo:assignment2')
+                    }
                 }
             }
         }
