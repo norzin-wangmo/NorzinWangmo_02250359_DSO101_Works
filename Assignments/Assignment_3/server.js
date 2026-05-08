@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   res.end(`
     <h1>DSO101 Assignment 3</h1>
     <p>Todo App running successfully.</p>
-    <p>CI/CD with GitHub Actions, DockerHub, and Render is working.</p>
+    <p>CI/CD pipeline is working successfully.</p>
   `);
 });
 
