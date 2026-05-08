@@ -5,6 +5,10 @@ pipeline {
         nodejs 'NodeJS'
     }
 
+    environment {
+        PATH = "/Applications/Docker.app/Contents/Resources/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
@@ -38,14 +42,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 dir('Assignments/Assignment_2/backend') {
-                    sh '/Applications/Docker.app/Contents/Resources/bin/docker build -t norwang2026/be-todo:assignment2 .'
+                    sh 'docker build -t norwang2026/be-todo:assignment2 .'
                 }
             }
         }
 
         stage('Docker Push') {
             steps {
-                sh '/Applications/Docker.app/Contents/Resources/bin/docker push norwang2026/be-todo:assignment2'
+                sh 'docker push norwang2026/be-todo:assignment2'
             }
         }
     }
