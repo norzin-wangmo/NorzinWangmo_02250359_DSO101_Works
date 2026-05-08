@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
   res.end(`
     <h1>DSO101 Assignment 3</h1>
-    <p>Todo App running successfully.</p>
+    <p>Todo App running successfully with CI/CD pipeline.</p>
     <p>CI/CD pipeline is working successfully.</p>
   `);
 });
