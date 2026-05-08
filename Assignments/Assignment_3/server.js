@@ -1,13 +1,16 @@
-const express = require("express");
+const http = require("http");
 
-const app = express();
+const PORT = process.env.PORT || 3000;
 
-const PORT = 3000;
-
-app.get("/", (req, res) => {
-  res.send("Todo App is running successfully!");
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end(`
+    <h1>DSO101 Assignment 3</h1>
+    <p>Todo App running successfully.</p>
+    <p>CI/CD with GitHub Actions, DockerHub, and Render is working.</p>
+  `);
 });
 
-app.listen(PORT, () => {
-  console.log("Server is running on port 3000");
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
