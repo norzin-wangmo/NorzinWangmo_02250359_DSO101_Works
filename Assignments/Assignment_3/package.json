@@ -1,9 +1,13 @@
 {
-  "name": "assignment_3",
+  "name": "dso101-assignment-3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "DSO101 Assignment 3 CI/CD with DockerHub and Render",
+  "main": "server.js",
   "scripts": {
-  "start": "node server.js",
-  "test": "echo \"Tests passed successfully\" && exit 0"
+    "start": "node server.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
