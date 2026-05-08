@@ -35,7 +35,7 @@ pipeline {
             }
         }
 
-                stage('Docker Build') {
+        stage('Docker Build') {
             steps {
                 dir('Assignments/Assignment_2/backend') {
                     sh '/Applications/Docker.app/Contents/Resources/bin/docker build -t norwang2026/be-todo:assignment2 .'
@@ -48,4 +48,5 @@ pipeline {
                 sh '/Applications/Docker.app/Contents/Resources/bin/docker push norwang2026/be-todo:assignment2'
             }
         }
+    }
 }
