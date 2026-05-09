@@ -2,7 +2,8 @@ name: Build, Push and Deploy
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -26,8 +27,8 @@ jobs:
         with:
           context: ./Assignments/Assignment_3
           file: ./Assignments/Assignment_3/Dockerfile
-          platforms: linux/amd64
           push: true
+          platforms: linux/amd64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/todo-app:latest
 
       - name: Trigger Render Deployment
