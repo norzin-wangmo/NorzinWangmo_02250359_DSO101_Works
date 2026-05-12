@@ -3,7 +3,7 @@
 ## Student Information
 
 - **Name:** Norzin Wangmo  
-- **Student Number:** 02250359  
+- **Student ID:** 02250359  
 - **Module:** DSO101 – Continuous Integration and Continuous Deployment  
 - **Assignment:** Assignment I  
 - **Project Title:** Todo List Application  

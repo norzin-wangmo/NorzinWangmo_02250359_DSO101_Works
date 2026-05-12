@@ -3,6 +3,7 @@
 ## Student Information
 
 - Name: Norzin Wangmo
+- Student Number: 02250359 
 - Module: DSO101
 - Assignment: Assignment 3
 - Topic: CI/CD Pipeline with Docker and Cloud Deployment
